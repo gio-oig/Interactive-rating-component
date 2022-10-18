@@ -1,0 +1,82 @@
+.rate-card-header-image {
+  margin-block-end: 30px;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1/1;
+  width: 48px;
+
+  background-color: var(--dark-blue);
+  border-radius: 100%;
+}
+
+.card_ratings {
+  margin-block-end: 32px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--dark-blue);
+  color: var(--medium-gray);
+  cursor: pointer;
+}
+
+.card_rating:not(.card_rating--selected):hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.card_rating.card_rating--selected {
+  color: var(--white);
+  background-color: var(--medium-gray);
+}
+
+.card_submit {
+  width: 100%;
+  padding: 11px 0px;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.99px;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 22.5px;
+  text-transform: uppercase;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.card_submit:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 400px) {
+  .rate-card-header-image {
+    margin-block-end: 16px;
+  }
+  .rate-card-header-image {
+    width: 40px;
+  }
+
+  .card_rating {
+    width: 42px;
+    font-size: 14px;
+  }
+
+  .card_submit {
+    font-size: 14px;
+    line-height: 17.72px;
+    letter-spacing: 1.87px;
+  }
+}

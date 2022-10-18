@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import RateCard from "src/components/rateCard/rateCard";
+import ResultCard from "./components/resultCard/resultCard";
+
+import "./App.css";
+import { useState } from "react";
+
+enum VIEWS {
+  RATE,
+  RESULT,
+}
 
 function App() {
+  const [currentView, setCurrentView] = useState(VIEWS.RATE);
+  const [selectedrating, setSelectedrating] = useState(NaN);
+
+  const handleSubmit = () => {
+    if (!selectedrating) return;
+
+    setCurrentView(VIEWS.RESULT);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {VIEWS.RATE === currentView ? (
+        <RateCard
+          selectedrating={selectedrating}
+          setSelectedrating={setSelectedrating}
+          onSubmit={handleSubmit}
+        />
+      ) : (
+        <ResultCard selectedRating={selectedrating} />
+      )}
     </div>
   );
 }

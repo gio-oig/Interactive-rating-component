@@ -1,0 +1,43 @@
+.card-wrapper {
+  min-width: 100px;
+  max-width: 412px;
+  min-height: 100px;
+  padding: 32px;
+  border-radius: 30px;
+  background: var(--black-gradient);
+}
+
+.card__title {
+  margin-block-end: 7px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35.45px;
+  color: var(--white);
+}
+
+.card__desc {
+  margin-block-end: 24px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--light-gray);
+}
+
+@media screen and (max-width: 400px) {
+  .card-wrapper {
+    padding: 24px;
+    margin: 0 20px;
+  }
+
+  .card__title {
+    font-size: 24px;
+    line-height: 30.38px;
+  }
+
+  .card__desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

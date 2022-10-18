@@ -1,0 +1,32 @@
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-card .card__desc {
+  text-align: center;
+  margin-block-end: 0;
+}
+
+.result-card .text-with-bg {
+  margin: 32px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .result-card img {
+    height: 96px;
+  }
+
+  .result-card .card__title {
+    margin-bottom: 10px;
+  }
+
+  .result-card .text-with-bg {
+    margin: 29px 0;
+    padding: 5px 12px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
